@@ -27,7 +27,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'schoolapp',
+    'admin_interface',  # admin theme modifications
+    'colorfield',       # admin color theme
 ]
+
+# Add this line to enable the theme
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
