@@ -1,7 +1,19 @@
 from django.db import models
 
+RESULT_CHOICES = (
+    ('1', '1'),
+    ('2', '2'),
+    ('3', '3'),
+    ('4', '4'),
+    ('5', '5'),
+    ('6', '6'),
+    ('7', '7'),
+    ('8', '8'),
+    ('9', '9'),
+    )
 # Create your models here.
 class SeniorOne(models.Model):
+    # Personal Information
     first_name = models.CharField(max_length=100)
     middle_name = models.IntegerField()
     last_name = models.CharField(max_length=100)
@@ -31,5 +43,15 @@ class SeniorOne(models.Model):
     special_needs = models.Choices('Yes', 'No')
     medical_History = models.TextField(max_length=100)
 
+    # Academic Results
+    english = models.TextChoices('1', '2', '3', '4', '5', '6', '7', '8', '9')
+    mathematics = models.TextChoices('1', '2', '3', '4', '5', '6', '7', '8', '9')
+    social_studies = models.TextChoices('1', '2', '3', '4', '5', '6', '7', '8', '9')
+    science = models.TextChoices('1', '2', '3', '4', '5', '6', '7', '8', '9')
+    aggregates = models.Choices('1', '2', '3', '4', '5', '6', '7', '8', '9', '10')
+    division = models.Choices('1', '2', '3', '4')
+    results_photo = models.ImageField(upload_to='results_photos')
 
     
+
+
