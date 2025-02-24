@@ -27,9 +27,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'schoolapp',
+    'crispy_forms',
+    'crispy_bootstrap4',
     'admin_interface',  # admin theme modifications
     'colorfield',       # admin color theme
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Add this line to enable the theme
 X_FRAME_OPTIONS = 'SAMEORIGIN'
