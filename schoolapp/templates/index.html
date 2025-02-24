@@ -1,5 +1,31 @@
-<!-- filepath: /C:/Users/User/Desktop/trial/env/school/schoolapp/templates/index.html -->
 {% load crispy_forms_tags %}
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ST.Francis Registration Form</title> -->
+    <!-- Include Bootstrap CSS -->
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Senior One Student Form</h1>
+        <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div> -->
+    <!-- Include Bootstrap JS and dependencies -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> -->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,13 +40,162 @@
         <h1 class="mb-4">Senior One Student Form</h1>
         <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
             {% csrf_token %}
-            {{ form|crispy }}
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="id_first_name">First Name</label>
+                    {{ form.first_name|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="id_middle_name">Middle Name</label>
+                    {{ form.middle_name|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="id_last_name">Last Name</label>
+                    {{ form.last_name|as_crispy_field }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="id_reg_no">Registration Number</label>
+                    {{ form.reg_no|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="id_emergency_contact">Emergency Contact</label>
+                    {{ form.emergency_contact|as_crispy_field }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="id_sex">Sex</label>
+                    {{ form.sex|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="id_status">Status</label>
+                    {{ form.status|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="id_cls">Class</label>
+                    {{ form.cls|as_crispy_field }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="id_elective">Elective Subject</label>
+                    {{ form.elective|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="id_date_of_birth">Date of Birth</label>
+                    {{ form.date_of_birth|as_crispy_field }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="id_religion">Religion</label>
+                    {{ form.religion|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="id_former_school">Former School</label>
+                    {{ form.former_school|as_crispy_field }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="id_index_no">Index Number</label>
+                    {{ form.index_no|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="id_hobbies">Hobbies</label>
+                    {{ form.hobbies|as_crispy_field }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="id_dream_profession">Dream Profession</label>
+                    {{ form.dream_profession|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="id_nationality">Nationality</label>
+                    {{ form.nationality|as_crispy_field }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="id_student_nin">Student NIN</label>
+                    {{ form.student_nin|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="id_student_lin">Student LIN</label>
+                    {{ form.student_lin|as_crispy_field }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="id_home_address">Home Address</label>
+                    {{ form.home_address|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="id_district">District</label>
+                    {{ form.district|as_crispy_field }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="id_city">City</label>
+                    {{ form.city|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="id_country">Country</label>
+                    {{ form.country|as_crispy_field }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="id_special_needs">Special Needs</label>
+                    {{ form.special_needs|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="id_medical_history">Medical History</label>
+                    {{ form.medical_history|as_crispy_field }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="id_english">English</label>
+                    {{ form.english|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="id_mathematics">Mathematics</label>
+                    {{ form.mathematics|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="id_social_studies">Social Studies</label>
+                    {{ form.social_studies|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="id_science">Science</label>
+                    {{ form.science|as_crispy_field }}
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="id_aggregates">Aggregates</label>
+                    {{ form.aggregates|as_crispy_field }}
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="id_division">Division</label>
+                    {{ form.division|as_crispy_field }}
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="id_results_photo">Results Photo</label>
+                {{ form.results_photo|as_crispy_field }}
+            </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
     <!-- Include Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.amazonaws.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
