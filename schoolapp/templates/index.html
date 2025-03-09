@@ -34,12 +34,24 @@
     <title>ST.Francis Registration Form</title>
     <!-- Include Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
 </head>
+
 <body style="background-color: aliceblue;">
     <div class="container mt-5">
-        <center><h1 class="mb-4">Senior One Student Form</h1></center>
+        <center><div style="display: flex; justify-content: center; align-items: center;">
+            <img src="https://stfranciss.netlify.app/th.png" alt="" width="100px" height="100px">
+            <div class="txt">
+                <h2 style="margin-left: 30px;">ST.Francis Senior Secondary School</h2>
+                <p>Students Online Registration For S1 </p>
+            </div>
+        </div></center>
+
+<br>
+        <h5>Online Registration Form S1</h5><br>
         <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
             {% csrf_token %}
+           <h3>Personal Info</h3>
             <div class="form-row">
                 <div class="form-group col-md-4">
                     <label for="id_first_name"></label>
@@ -159,6 +171,8 @@
                     {{ form.medical_history|as_crispy_field }}
                 </div>
             </div>
+
+            <h3>Academic Results</h3>
             <div class="form-row">
                 <div class="form-group col-md-3">
                     <label for="id_english"></label>
